@@ -1,0 +1,2 @@
+{"id":1,"name":"Adarsh","edge":[{"id":1,"name":"friends","ins":[1],"out":[2]}]}
+{"id":2,"name":"Pankaj","edge":[{"id":1,"name":"friends","ins":[1],"out":[2]}]}
