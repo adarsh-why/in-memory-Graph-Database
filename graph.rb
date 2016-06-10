@@ -48,31 +48,31 @@ def graph_to_json
     puts 'data replaced in "result.json" inside root folder' 
 end
 
-def query_mode	
-	def find_relation from, relation
-  		result = [] 
-  		@graph.each do |hash|
-    		hash[:edge].each do |h|
-    			if relation == 'in'
-    				result << h[:from] if from == h[:to]
-    			elsif relation == 'out'
-    				result << h[:to] if from == h[:from]
-    			else  
-      				result << h[:to] if (h[:name] == relation and h[:from] == from)
-      			end
-    		end
-  		end
-  		return result
-	end
+def query_mode    
+    def find_relation from, relation
+        result = [] 
+        @graph.each do |hash|
+           	hash[:edge].each do |h|
+                if relation == 'in'
+                    result << h[:from] if from == h[:to]
+                elsif relation == 'out'
+                    result << h[:to] if from == h[:from]
+                else  
+                    result << h[:to] if (h[:name] == relation and h[:from] == from)
+                end
+            end
+        end
+        return result
+    end
 
-	puts "enter 'exit' to exit query mode"
-	while true
-  		print "query>>>  "
-  		input = gets.chomp
-  		break if input.downcase == "exit"
-  		from, relation = input.split('.')
-		puts find_relation from, relation
-	end
+    puts "enter 'exit' to exit query mode"
+    while true
+        print "query>>>  "
+        input = gets.chomp
+        break if input.downcase == "exit"
+        from, relation = input.split('.')
+        puts find_relation from, relation
+    end
 end
 
 while true
@@ -83,7 +83,7 @@ while true
     elsif input.downcase == "g.json"
         graph_to_json
     elsif input.downcase == "g.query"
-    	query_mode
+        query_mode
     else
         process(input)
     end
