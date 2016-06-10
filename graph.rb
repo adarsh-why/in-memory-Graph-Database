@@ -52,7 +52,7 @@ def query_mode
     def find_relation from, relation
         result = [] 
         @graph.each do |hash|
-           	hash[:edge].each do |h|
+            hash[:edge].each do |h|
                 if relation == 'in'
                     result << h[:from] if from == h[:to]
                 elsif relation == 'out'
@@ -66,12 +66,24 @@ def query_mode
     end
 
     puts "enter 'exit' to exit query mode"
-    while true
+    
+    while true        
         print "query>>>  "
         input = gets.chomp
         break if input.downcase == "exit"
-        from, relation = input.split('.')
-        puts find_relation from, relation
+        
+        query_array = Array.new(input.split('.'))
+        from = query_array.shift
+        relation = query_array.shift
+        final_result = find_relation from, relation
+        if query_array.empty?
+            puts final_result
+        else
+        	query_array.each do |relation|
+            final_result = find_relation final_result.last, relation
+          	end
+          	puts final_result
+        end
     end
 end
 
