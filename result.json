@@ -1,2 +1,183 @@
-{"id":1,"name":"Adarsh","edge":[{"id":1,"name":"friends","ins":[1],"out":[2]}]}
-{"id":2,"name":"Pankaj","edge":[{"id":1,"name":"friends","ins":[1],"out":[2]}]}
+[
+  {
+    "id": 1,
+    "name": "saturn",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 2,
+    "name": "sky",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 3,
+    "name": "sea",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 4,
+    "name": "jupiter",
+    "edge": [
+      {
+        "id": 1,
+        "name": "father",
+        "from": "jupiter",
+        "to": "saturn"
+      },
+      {
+        "id": 2,
+        "name": "lives",
+        "from": "jupiter",
+        "to": "sky"
+      },
+      {
+        "id": 3,
+        "name": "brother",
+        "from": "jupiter",
+        "to": "neptune"
+      },
+      {
+        "id": 11,
+        "name": "brother",
+        "from": "jupiter",
+        "to": "pluto"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "neptune",
+    "edge": [
+      {
+        "id": 4,
+        "name": "brother",
+        "from": "neptune",
+        "to": "jupiter"
+      },
+      {
+        "id": 5,
+        "name": "lives",
+        "from": "neptune",
+        "to": "sea"
+      },
+      {
+        "id": 14,
+        "name": "brother",
+        "from": "neptune",
+        "to": "pluto"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "hercules",
+    "edge": [
+      {
+        "id": 6,
+        "name": "father",
+        "from": "hercules",
+        "to": "jupiter"
+      },
+      {
+        "id": 7,
+        "name": "mother",
+        "from": "hercules",
+        "to": "alcmene"
+      },
+      {
+        "id": 8,
+        "name": "battled",
+        "from": "hercules",
+        "to": "nemean"
+      },
+      {
+        "id": 9,
+        "name": "battled",
+        "from": "hercules",
+        "to": "hydra"
+      },
+      {
+        "id": 10,
+        "name": "battled",
+        "from": "hercules",
+        "to": "cerberus"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "alcmene",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 8,
+    "name": "pluto",
+    "edge": [
+      {
+        "id": 12,
+        "name": "brother",
+        "from": "pluto",
+        "to": "jupiter"
+      },
+      {
+        "id": 13,
+        "name": "brother",
+        "from": "pluto",
+        "to": "neptune"
+      },
+      {
+        "id": 15,
+        "name": "pet",
+        "from": "pluto",
+        "to": "cerberus"
+      },
+      {
+        "id": 16,
+        "name": "lives",
+        "from": "pluto",
+        "to": "tartarus"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "nemean",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 10,
+    "name": "hydra",
+    "edge": [
+
+    ]
+  },
+  {
+    "id": 11,
+    "name": "cerberus",
+    "edge": [
+      {
+        "id": 17,
+        "name": "lives",
+        "from": "cerberus",
+        "to": "tartarus"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "tartarus",
+    "edge": [
+
+    ]
+  }
+]
